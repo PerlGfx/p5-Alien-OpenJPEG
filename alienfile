@@ -1,5 +1,7 @@
 use alienfile;
 
+plugin 'PkgConfig' => 'libopenjp2';
+
 # http://www.openjpeg.org/
 share {
 	plugin Download => (
