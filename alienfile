@@ -1,0 +1,17 @@
+use alienfile;
+
+# http://www.openjpeg.org/
+share {
+	plugin Download => (
+		url => 'https://github.com/uclouvain/openjpeg/releases',
+		version => qr/v([\w\.]+)\.tar\.gz/,
+	);
+
+	plugin Extract => 'tar.gz';
+
+	build [
+		[ 'cmake', '-DCMAKE_INSTALL_PREFIX:PATH=%{.install.prefix}', '.' ],
+		[ '%{make}' ],
+		[ '%{make}', 'install' ],
+	]
+};
