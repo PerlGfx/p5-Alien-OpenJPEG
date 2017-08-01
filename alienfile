@@ -6,7 +6,8 @@ plugin 'PkgConfig' => 'libopenjp2';
 share {
 	plugin Download => (
 		url => 'https://github.com/uclouvain/openjpeg/releases',
-		version => qr/v([\w\.]+)\.tar\.gz/,
+		# Newer versions are tagged like "v2.1.2" instead of "version.2.1"
+		version => qr/v([\d\.]+)\.tar\.gz/,
 	);
 
 	plugin Extract => 'tar.gz';
