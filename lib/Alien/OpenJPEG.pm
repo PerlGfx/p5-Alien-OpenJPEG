@@ -4,7 +4,6 @@ package Alien::OpenJPEG;
 use strict;
 use warnings;
 
-use parent qw(Alien::Base);
-use File::Spec;
+use parent qw(Alien::Base::Dino);
 
 1;

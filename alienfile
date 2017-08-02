@@ -1,5 +1,7 @@
 use alienfile;
 
+requires 'Alien::Build::Plugin::Gather::Dino';
+
 plugin 'PkgConfig' => 'libopenjp2';
 
 # http://www.openjpeg.org/
@@ -16,5 +18,7 @@ share {
 		[ 'cmake', '-DCMAKE_INSTALL_PREFIX:PATH=%{.install.prefix}', '.' ],
 		[ '%{make}' ],
 		[ '%{make}', 'install' ],
-	]
+	];
+
+	plugin 'Gather::Dino';
 };
