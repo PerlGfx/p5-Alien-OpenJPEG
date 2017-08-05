@@ -1,3 +1,0 @@
-requires 'Alien::libtool',
-	git => 'https://github.com/zmughal/p5-Alien-libtool.git',
-	branch => 'help2man-nop';
