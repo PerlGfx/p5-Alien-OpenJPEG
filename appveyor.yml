@@ -22,7 +22,7 @@ environment:
 install:
   # running under CI
   - set CI_TESTING=1
-  - set DEVOPS_BRANCH=msys2-build-and-test
+  - set DEVOPS_BRANCH=master
   - set RENARD_DEVOPS_HOOK_PRE_PERL=cpanm --verbose Alien::Build@0.86_01 Alien::libtool@0.08_01 Alien::autoconf@0.06_01 Alien::automake@0.10_01
   - cinst curl -y
   - 'cd %APPVEYOR_BUILD_FOLDER% & curl -fsS -o helper.pl https://raw.githubusercontent.com/project-renard/devops/%DEVOPS_BRANCH%/script/helper.pl & perl helper.pl install'
