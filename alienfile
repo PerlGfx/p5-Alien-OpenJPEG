@@ -17,7 +17,10 @@ share {
 	plugin Extract => 'tar.gz';
 
 	build [
-		[ 'cmake', qw(-G), 'Unix Makefiles', '-DCMAKE_INSTALL_PREFIX:PATH=%{.install.prefix}', '.' ],
+		[ 'cmake', qw(-G), 'Unix Makefiles',
+			'-DCMAKE_INSTALL_PREFIX:PATH=%{.install.prefix}',
+			'-DBUILD_PKGCONFIG_FILES=ON',
+			'.' ],
 		[ '%{gmake}' ],
 		[ '%{gmake}', 'install' ],
 	];
