@@ -4,7 +4,10 @@ package Alien::OpenJPEG;
 use strict;
 use warnings;
 
-use parent qw(Alien::Base::Dino);
+use base qw( Alien::Base );
+use Role::Tiny::With qw( with );
+
+with 'Alien::Role::Dino';
 
 1;
 __END__
