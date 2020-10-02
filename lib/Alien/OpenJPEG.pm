@@ -15,4 +15,4 @@ __END__
 
 L<OpenJPEG|http://www.openjpeg.org/>
 
-L<Repository information|http://project-renard.github.io/doc/development/repo/p5-Alien-OpenJPEG/>
+
